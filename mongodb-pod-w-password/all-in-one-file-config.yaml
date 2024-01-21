@@ -5,8 +5,8 @@ metadata:
   name: mongodb-secret
 type: Opaque
 data:
-  username: dXNlcm5hbWU=
-  password: cGFzc3dvcmQ=
+  mongo-root-username: dXNlcm5hbWU=
+  mongo-root-password: cGFzc3dvcmQ=
 
 ---
 apiVersion: apps/v1
@@ -35,12 +35,12 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: mongodb-secret
-                  key: username
+                  key: mongo-root-username
             - name: MONGO_INITDB_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: mongodb-secret
-                  key: password
+                  key: mongo-root-password
 
 ---
 apiVersion: v1
