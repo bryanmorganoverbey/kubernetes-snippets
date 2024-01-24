@@ -11,5 +11,5 @@ metadata:
 nodeGroups:
   - name: worker-node
     instanceType: t2.micro
-    desiredCapacity: 2
-availabilityZones: ["us-east-1a", "us-east-1b"]
+    desiredCapacity: 3
+availabilityZones: ["us-east-1a", "us-east-1b", "us-east-1c"]
